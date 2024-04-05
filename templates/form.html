@@ -1,0 +1,96 @@
+<html>
+<body>
+<form action="{{url_for('predict_datapoint')}}" method="POST">
+    <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" placeholder="Enter age value (integer)">
+    </div>
+
+    <div class="form-group">
+        <label for="job">Job:</label>
+        <select id="job" name="job">
+            <option value="admin">Admin</option>
+            <option value="technician">Technician</option>
+            <option value="services">Services</option>
+            <option value="management">Management</option>
+            <option value="retired">Retired</option>
+            <option value="blue_collar">Blue Collar</option>
+            <option value="unemployed">Unemployed</option>
+            <option value="entrepreneur">Entrepreneur</option>
+            <option value="housemaid">Housemaid</option>
+            <option value="unknown">Unknown</option>
+            <option value="self_employed">Self Employed</option>
+            <option value="student">Student</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="marital">Marital Status:</label>
+        <select id="marital" name="marital">
+            <option value="married">Married</option>
+            <option value="single">Single</option>
+            <option value="divorced">Divorced</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="education">Education:</label>
+        <select id="education" name="education">
+            <option value="secondary">Secondary</option>
+            <option value="tertiary">Tertiary</option>
+            <option value="primary">Primary</option>
+            <option value="unknown">Unknown</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="balance">Balance:</label>
+        <input type="text" id="balance" name="balance" placeholder="Enter balance value (integer)">
+    </div>
+
+    <div class="form-group">
+        <label for="housing">Housing:</label>
+        <select id="housing" name="housing">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="loan">Loan:</label>
+        <select id="loan" name="loan">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="duration">Duration:</label>
+        <input type="text" id="duration" name="duration" placeholder="Enter duration value (integer)">
+    </div>
+
+    <div class="form-group">
+        <label for="pdays">Pdays:</label>
+        <input type="text" id="pdays" name="pdays" placeholder="Enter pdays value (integer)">
+    </div>
+
+    <div class="form-group">
+        <label for="previous">Previous:</label>
+        <input type="text" id="previous" name="previous" placeholder="Enter previous value (integer)">
+    </div>
+
+    <div class="form-group">
+        <label for="poutcome">Outcome of Previous Marketing Campaign:</label>
+        <select id="poutcome" name="poutcome">
+            <option value="unknown">Unknown</option>
+            <option value="other">Other</option>
+            <option value="failure">Failure</option>
+            <option value="success">Success</option>
+        </select>
+    </div>
+
+    <div style="clear:both;"></div>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
