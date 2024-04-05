@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle CO2 Emission Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vehicle CO2 Emission Prediction</h1>
+        <form action="{{url_for('predict_datapoint')}}" method="POST">
+            <div class="form-group">
+                <label for="YEAR">Year:</label>
+                <input type="text" id="YEAR" name="YEAR" placeholder="Enter Year">
+            </div>
+            <div class="form-group">
+                <label for="MAKE">Make:</label>
+                <select id="MAKE" name="MAKE">
+                    <option value="BMW">BMW</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Jaguar">Jaguar</option>
+                    <option value="Land Rover">Land Rover</option>
+                    <option value="Lexus">Lexus</option>
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    <option value="Porsche">Porsche</option>
+                    <option value="Subaru">Subaru</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Volvo">Volvo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ENGINE_SIZE">Engine Size:</label>
+                <input type="text" id="ENGINE_SIZE" name="ENGINE_SIZE" placeholder="Enter Engine Size (float)">
+            </div>
+            <div class="form-group">
+                <label for="CYLINDERS">Cylinders:</label>
+                <input type="text" id="CYLINDERS" name="CYLINDERS" placeholder="Enter Cylinders (float)">
+            </div>
+            <div class="form-group">
+                <label for="FUEL">Fuel:</label>
+                <select id="FUEL" name="FUEL">
+                    <option value="Premium_gasoline">Premium gasoline</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Regular_gasoline">Regular gasoline</option>
+                    <option value="Ethanol">Ethanol</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="FUEL_CONSUMPTION">Fuel Consumption:</label>
+                <input type="text" id="FUEL_CONSUMPTION" name="FUEL_CONSUMPTION" placeholder="Enter Fuel Consumption (float)">
+            </div>
+            <div class="form-group">
+                <label for="HWY_L_PER_100KM">Highway Fuel Consumption (L/100 km):</label>
+                <input type="text" id="HWY_L_PER_100KM" name="HWY_L_PER_100KM" placeholder="Enter Highway Fuel Consumption (float)">
+            </div>
+            <div class="form-group">
+                <label for="COMB_L_PER_100KM">Combined Fuel Consumption (L/100 km):</label>
+                <input type="text" id="COMB_L_PER_100KM" name="COMB_L_PER_100KM" placeholder="Enter Combined Fuel Consumption (float)">
+            </div>
+            <div class="form-group">
+                <label for="COMB_MPG">Combined Fuel Consumption (mpg):</label>
+                <input type="text" id="COMB_MPG" name="COMB_MPG" placeholder="Enter Combined Fuel Consumption (mpg)">
+            </div>
+            <div class="form-group">
+                <label for="BROAD_VEHICLE_CLASS">Broad Vehicle Class:</label>
+                <select id="BROAD_VEHICLE_CLASS" name="BROAD_VEHICLE_CLASS">
+                    <option value="small_car">Small Car</option>
+                    <option value="medium_car">Medium Car</option>
+                    <option value="large_car">Large Car</option>
+                    <option value="other">Other</option>
+                    <option value="pick_up_truck">Pickup Truck</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="TRANSMISSION_GROUP">Transmission Group:</label>
+                <select id="TRANSMISSION_GROUP" name="TRANSMISSION_GROUP">
+                    <option value="Basic Automatic">Basic Automatic</option>
+                    <option value="Manual">Manual</option>
+                    <option value="Standard Automatic">Standard Automatic</option>
+                    <option value="Automated Manual">Automated Manual</option>
+                    <option value="Advanced Automatic">Advanced Automatic</option>
+                    <option value="CVT">CVT</option>
+                </select>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
