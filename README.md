@@ -47,7 +47,7 @@ Ml flows is the platform for entire ML lifecycle
 
 - we have to setup all thing in the environment variable all the commmand in git bash 
 '''
-export MLFLOW_TRACKING_URI=https://dagshub.com/jayraj2498/CO2_emission_cicd-.mlflow \
+export MLFLOW_TRACKING_URI=https://dagshub.com/jayraj2498/Bank_marketing_deposite_pred_CICD.mlflow \
 export MLFLOW_TRACKING_USERNAME=jayraj2498 \
 export MLFLOW_TRACKING_PASSWORD=777e2be0b0c43fcc2efbc898716cbaebe35c912b \
 export python script.py  '''   <-- optional >
